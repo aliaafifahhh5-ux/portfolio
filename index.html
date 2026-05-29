@@ -1,0 +1,667 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   ALIA'S ARTWORK
+  </title>
+  <link href="style.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <!-- =========================
+       HERO SECTION
+  ========================== -->
+  <section class="hero">
+   <div class="hero-content">
+    <p class="hero-sub">
+     Welcome to:
+    </p>
+    <h1 class="hero-title">
+     <span id="typeText">
+     </span>
+     <span class="cursor">
+      |
+     </span>
+    </h1>
+   </div>
+  </section>
+  <!-- =========================
+       TOP NAVIGATION
+  ========================== -->
+  <header class="topbar">
+   <div class="topbar-left">
+    <div class="brand">
+     ALIA'S ARTWORK
+    </div>
+    <nav class="topnav">
+     <a class="navlink active" href="index.html">
+      Explore
+     </a>
+     <a class="navlink" href="resume.html">
+      Resume
+     </a>
+     <a class="navlink" href="socmed.html">
+      Socmed links
+     </a>
+    </nav>
+   </div>
+   <div class="topbar-right">
+    <a class="contact" href="mailto:aliaafifahhh5@gmail.com">
+     Mail Me: aliaafifahhh5@gmail.com
+    </a>
+    <span class="sep">
+     |
+    </span>
+    <a class="contact" href="#">
+     📞 +0135659423
+    </a>
+   </div>
+  </header>
+  <!-- =========================
+       CONTROLS ROW
+  ========================== -->
+  <section class="controls">
+   <button class="pill" id="filterBtn" type="button">
+    <span>
+     filter by colors
+    </span>
+   </button>
+   <input autocomplete="new-password" class="search" id="searchInput" name="artworkSearchOnly" placeholder="search keyword" spellcheck="false" type="text"/>
+   <button class="pill" type="button">
+    Total Works: 50
+   </button>
+  </section>
+  <div class="filter-overlay" id="filterOverlay">
+  </div>
+  <aside class="filter-panel" id="filterPanel">
+   <div class="filter-head">
+    <h2>
+     Filter
+    </h2>
+    <button id="closeFilter" type="button">
+     &times;
+    </button>
+   </div>
+   <div class="filter-section">
+    <h3>
+     Colors
+    </h3>
+    <button class="color-option active" data-color="all">
+     All Colors
+    </button>
+    <button class="color-option" data-color="pastel">
+     Pastel
+    </button>
+    <button class="color-option" data-color="nature">
+     Nature
+    </button>
+    <button class="color-option" data-color="warm">
+     Warm Palette
+    </button>
+    <button class="color-option" data-color="cool">
+     Cool Palette
+    </button>
+    <button class="color-option" data-color="neutral">
+     Neutral Palette
+    </button>
+    <button class="color-option" data-color="pop">
+     Color Pop
+    </button>
+   </div>
+  </aside>
+  <!-- =========================
+       CATEGORY CHIPS
+  ========================== -->
+  <section class="chips-row">
+   <button aria-label="scroll left" class="navbtn" id="chipLeft" type="button">
+    &lsaquo;
+   </button>
+   <div class="chips" id="chipStrip">
+    <div class="chips-track" id="chipTrack">
+     <!-- SET 1 -->
+     <button class="chip active" onclick="showAll()" type="button">
+      For You
+     </button>
+     <button class="chip" onclick="filterArtwork('best')" type="button">
+      Best of artwork ⭐
+     </button>
+     <button class="chip" onclick="filterArtwork('graphic')" type="button">
+      Graphic Design
+     </button>
+     <button class="chip" onclick="filterArtwork('photo')" type="button">
+      Photography
+     </button>
+     <button class="chip" onclick="filterArtwork('illustration')" type="button">
+      Illustration
+     </button>
+     <button class="chip" onclick="filterArtwork('3d')" type="button">
+      3D Art
+     </button>
+     <button class="chip" onclick="filterArtwork('uiux')" type="button">
+      UI/UX
+     </button>
+     <!-- SET 2 -->
+     <button class="chip" onclick="filterArtwork('motion')" type="button">
+      Motion
+     </button>
+     <button class="chip" onclick="filterArtwork('product')" type="button">
+      Product Design
+     </button>
+     <button class="chip" onclick="filterArtwork('advertising')" type="button">
+      Advertising
+     </button>
+     <button class="chip" onclick="filterArtwork('fineart')" type="button">
+      Fine Arts
+     </button>
+     <button class="chip" onclick="filterArtwork('game')" type="button">
+      Game Design
+     </button>
+     <button class="chip" onclick="filterArtwork('photoshop')" type="button">
+      Photoshop
+     </button>
+     <button class="chip" onclick="filterArtwork('lightroom')" type="button">
+      Lightroom
+     </button>
+     <!-- SET 3 -->
+     <button class="chip" onclick="filterArtwork('illustrator')" type="button">
+      Illustrator
+     </button>
+     <button class="chip" onclick="filterArtwork('indesign')" type="button">
+      InDesign
+     </button>
+     <button class="chip" onclick="filterArtwork('premiere')" type="button">
+      Premiere Pro
+     </button>
+     <button class="chip" onclick="filterArtwork('aftereffects')" type="button">
+      After Effects
+     </button>
+    </div>
+   </div>
+   <button aria-label="scroll right" class="navbtn" id="chipRight" type="button">
+    &rsaquo;
+   </button>
+  </section>
+  <!-- =========================
+       GALLERY
+  ========================== -->
+  <main class="gallery">
+   <!-- =========================
+       ROW 1
+  ========================== -->
+   <!-- Artwork 1: Flower bunny -->
+   <article class="card" data-category="best illustration" data-color="pastel">
+    <img alt="Artwork 1" class="thumb" onclick="openPDFModal('slides/flower bunny.pdf')" src="images/fbt.png"/>
+    <p class="cap">
+     Flower bunny
+    </p>
+   </article>
+   <!-- Artwork 2: Cottonelle -->
+   <article class="card" data-category="best graphic advertising" data-color="pastel">
+    <img alt="Artwork 2" class="thumb" onclick="openPDFModal('slides/cottonelle.pdf')" src="images/ct.png"/>
+    <p class="cap">
+     Cottonelle
+    </p>
+   </article>
+   <!-- Artwork 3: Amir the Timid -->
+   <article class="card" data-category="best illustration" data-color="nature">
+    <img alt="Artwork 3" class="thumb" onclick="openPDFModal('slides/amir.pdf')" src="images/att (2).png"/>
+    <p class="cap">
+     Amir the Timid
+    </p>
+   </article>
+   <!-- Artwork 4: Palestine -->
+   <article class="card" data-category="graphic illustration" data-color="nature">
+    <img alt="Artwork 4" class="thumb" onclick="openPDFModal('slides/palestine.pdf')" src="images/pt.png"/>
+    <p class="cap">
+     Palestine
+    </p>
+   </article>
+   <!-- Artwork 5: Batik bunga -->
+   <article class="card" data-category="best fineart" data-color="neutral">
+    <img alt="Artwork 5" class="thumb" onclick="openPDFModal('slides/batik pertama bunga.pdf')" src="images/bt.png"/>
+    <p class="cap">
+     Batik bunga
+    </p>
+   </article>
+   <!-- =========================
+       ROW 2
+  ========================== -->
+   <!-- Artwork 6: Bunny & Turtle race -->
+   <article class="card" data-category="illustration motion" data-color="nature">
+    <img alt="Artwork 6" class="thumb" onclick="openPDFModal('slides/3pics storyboard.pdf')" src="images/rs.png"/>
+    <p class="cap">
+     Bunny &amp; Turtle race
+    </p>
+   </article>
+   <!-- Artwork 7: MalaysianFood Postcard -->
+   <article class="card" data-category="graphic advertising indesign" data-color="warm">
+    <img alt="Artwork 7" class="thumb" onclick="openPDFModal('slides/postcards.pdf')" src="images/tot.png"/>
+    <p class="cap">
+     MalaysianFood Postcard
+    </p>
+   </article>
+   <!-- Artwork 8: Snake N Ladder Game -->
+   <article class="card" data-category="graphic game" data-color="pop">
+    <img alt="Artwork 8" class="thumb" onclick="openPDFModal('slides/gamesnake.pdf')" src="images/snl.png"/>
+    <p class="cap">
+     Snake N Ladder Game
+    </p>
+   </article>
+   <!-- Artwork 9: Girls character design -->
+   <article class="card" data-category="illustration" data-color="pastel">
+    <img alt="Artwork 9" class="thumb" onclick="openPDFModal('slides/2girls.pdf')" src="images/ci.png"/>
+    <p class="cap">
+     Girls character design
+    </p>
+   </article>
+   <!-- Artwork 10: Bully Game -->
+   <article class="card" data-category="game" data-color="cool">
+    <img alt="Artwork 10" class="thumb" src="images/g.png"/>
+    <p class="cap">
+     Bully Game
+    </p>
+   </article>
+   <!-- =========================
+       ROW 3
+  ========================== -->
+   <!-- Artwork 11: Ghibli Magazine -->
+   <article class="card" data-category="best graphic indesign" data-color="pop">
+    <img alt="Artwork 11" class="thumb" onclick="openPDFModal('slides/ghibli Magazine layout.pdf')" src="images/fm.png"/>
+    <p class="cap">
+     Ghibli Magazine
+    </p>
+   </article>
+   <!-- Artwork 12: Unikl Raya card -->
+   <article class="card" data-category="graphic advertising" data-color="warm">
+    <img alt="Artwork 12" class="thumb" onclick="openPDFModal('slides/uniklraya.pdf')" src="images/others.png"/>
+    <p class="cap">
+     Unikl Raya card
+    </p>
+   </article>
+   <!-- Artwork 13: Malaysian Snack Layout -->
+   <article class="card" data-category="graphic advertising indesign" data-color="warm">
+    <img alt="Artwork 13" class="thumb" onclick="openPDFModal('slides/tastybooklet.pdf')" src="images/tasty.png"/>
+    <p class="cap">
+     Malaysian Snack Layout
+    </p>
+   </article>
+   <!-- Artwork 14: MeeGo -->
+   <article class="card" data-category="graphic advertising illustrator" data-color="warm">
+    <img alt="Artwork 14" class="thumb" onclick="openPDFModal('slides/meego.pdf')" src="images/DPP.png"/>
+    <p class="cap">
+     MeeGo
+    </p>
+   </article>
+   <!-- Artwork 15: Cupcakes Brochure -->
+   <article class="card" data-category="graphic advertising" data-color="pastel">
+    <img alt="Artwork 15" class="thumb" onclick="openPDFModal('slides/cupcake.pdf')" src="images/cupcake.png"/>
+    <p class="cap">
+     Cupcakes Brochure
+    </p>
+   </article>
+   <!-- =========================
+       ROW 4
+  ========================== -->
+   <!-- Artwork 16: Pahang Infographic -->
+   <article class="card" data-category="graphic illustrator" data-color="cool">
+    <img alt="Artwork 16" class="thumb" onclick="openPDFModal('slides/2girls.pdf')" src="images/pp.png"/>
+    <p class="cap">
+     Pahang Infographic
+    </p>
+   </article>
+   <!-- Artwork 17: 2D Animation 3 -->
+   <article class="card" data-category="motion aftereffects" data-color="cool">
+    <img alt="Artwork 17" class="thumb" onclick="openPDFModal('slides/2girls.pdf')" src="images/sa.png"/>
+    <p class="cap">
+     2D Animation 3
+    </p>
+   </article>
+   <!-- Artwork 18: Trine Store Website -->
+   <article class="card" data-category="uiux product" data-color="pastel">
+    <img alt="Artwork 18" class="thumb" onclick="openPDFModal('slides/trinestore.pdf')" src="images/ts.png"/>
+    <p class="cap">
+     Trine Store Website
+    </p>
+   </article>
+   <!-- Artwork 19: Dari Denar VR -->
+   <article class="card" data-category="3d uiux" data-color="nature">
+    <img alt="Artwork 19" class="thumb" onclick="openPDFModal('slides/ar.pdf')" src="images/mrd.png"/>
+    <p class="cap">
+     Dari Denar VR
+    </p>
+   </article>
+   <!-- Artwork 20: Respiration F3 Website -->
+   <article class="card" data-category="uiux" data-color="cool">
+    <img alt="Artwork 20" class="thumb" onclick="openPDFModal('slides/2girls.pdf')" src="images/midsains.png"/>
+    <p class="cap">
+     Respiration F3 Website
+    </p>
+   </article>
+   <!-- =========================
+       ROW 5
+  ========================== -->
+   <!-- Artwork 21: Animals Logo Mascot -->
+   <article class="card" data-category="graphic illustrator" data-color="pop">
+    <img alt="Artwork 21" class="thumb" onclick="openPDFModal('slides/mascots.pdf')" src="images/bara.png"/>
+    <p class="cap">
+     Animals Logo Mascot
+    </p>
+   </article>
+   <!-- Artwork 22: Newspaper Layout -->
+   <article class="card" data-category="graphic indesign" data-color="neutral">
+    <img alt="Artwork 22" class="thumb" onclick="openPDFModal('slides/news.pdf')" src="images/news.png"/>
+    <p class="cap">
+     Newspaper Layout
+    </p>
+   </article>
+   <!-- Artwork 23: Mini Puzzle Layout -->
+   <article class="card" data-category="graphic game" data-color="neutral">
+    <img alt="Artwork 23" class="thumb" onclick="openPDFModal('slides/2girls.pdf')" src="images/ogames.png"/>
+    <p class="cap">
+     Mini Puzzle Layout
+    </p>
+   </article>
+   <!-- Artwork 24: 3D Animation Group Project -->
+   <article class="card" data-category="3d" data-color="cool">
+    <img alt="Artwork 24" class="thumb" onclick="openPDFModal('slides/omar3d.pdf')" src="images/3d.png"/>
+    <p class="cap">
+     3D Animation Group Project
+    </p>
+   </article>
+   <!-- Artwork 25: SSH Website & Video -->
+   <article class="card" data-category="uiux motion premiere" data-color="neutral">
+    <img alt="Artwork 25" class="thumb" onclick="openPDFModal('slides/stop.pdf')" src="images/SSH.png"/>
+    <p class="cap">
+     SSH Website &amp; Video
+    </p>
+   </article>
+   <!-- =========================
+       ROW 6
+  ========================== -->
+   <!-- Artwork 26: Fettipop -->
+   <article class="card" data-category="graphic advertising" data-color="pop">
+    <img alt="Artwork 26" class="thumb" onclick="openPDFModal('slides/fettipop.pdf')" src="images/f.png"/>
+    <p class="cap">
+     Fettipop
+    </p>
+   </article>
+   <!-- Artwork 27: Muslimah Girls -->
+   <article class="card" data-category="illustration photoshop" data-color="neutral">
+    <img alt="Artwork 27" class="thumb" onclick="openPDFModal('slides/mgirls.pdf')" src="images/mgirls.jpg"/>
+    <p class="cap">
+     Muslimah Girls
+    </p>
+   </article>
+   <!-- Artwork 28: Fyp projects -->
+   <article class="card" data-category="uiux product" data-color="neutral">
+    <img alt="Artwork 28" class="thumb" onclick="openPDFModal('slides/2girls.pdf')" src="images/fyp.png"/>
+    <p class="cap">
+     Fyp projects
+    </p>
+   </article>
+   <!-- Artwork 29: Travel Magazine -->
+   <article class="card" data-category="graphic photo lightroom indesign" data-color="cool">
+    <img alt="Artwork 29" class="thumb" onclick="openPDFModal('slides/bali magazine.pdf')" src="images/bali.png"/>
+    <p class="cap">
+     Travel Magazine
+    </p>
+   </article>
+   <!-- Artwork 30: For Junior Website -->
+   <article class="card" data-category="uiux" data-color="warm">
+    <img alt="Artwork 30" class="thumb" onclick="openPDFModal('slides/2girls.pdf')" src="images/blogspot.png"/>
+    <p class="cap">
+     For Junior Website
+    </p>
+   </article>
+   <!-- =========================
+       ROW 7
+  ========================== -->
+   <!-- Artwork 31: Batik Rama -->
+   <article class="card" data-category="graphic fineart" data-color="warm">
+    <img alt="Artwork 31" class="thumb" onclick="openPDFModal('slides/batik kedua.pdf')" src="images/batikrama.png"/>
+    <p class="cap">
+     Batik Rama
+    </p>
+   </article>
+   <!-- Artwork 32: Photography jam -->
+   <article class="card" data-category="photo lightroom" data-color="neutral">
+    <img alt="Artwork 32" class="thumb" onclick="openPDFModal('slides/jam.pdf')" src="images/jam.png"/>
+    <p class="cap">
+     Photography jam
+    </p>
+   </article>
+   <!-- Artwork 33: Adobe Illustrator Exc -->
+   <article class="card" data-category="graphic illustrator" data-color="pop">
+    <img alt="Artwork 33" class="thumb" onclick="openPDFModal('slides/marco.pdf')" src="images/starmarco.png"/>
+    <p class="cap">
+     Adobe Illustrator Exc
+    </p>
+   </article>
+   <!-- Artwork 34: Motion Graphic 1 -->
+   <article class="card" data-category="motion aftereffects" data-color="neutral">
+    <img alt="Artwork 34" class="thumb" onclick="openPDFModal('slides/2girls.pdf')" src="images/mg1.png"/>
+    <p class="cap">
+     Motion Graphic 1
+    </p>
+   </article>
+   <!-- Artwork 35: Group Portfolio Website -->
+   <article class="card" data-category="uiux" data-color="cool">
+    <img alt="Artwork 35" class="thumb" onclick="openPDFModal('slides/wba.pdf')" src="images/Web3org.png"/>
+    <p class="cap">
+     Group Portfolio Website
+    </p>
+   </article>
+   <!-- =========================
+       ROW 8
+  ========================== -->
+   <!-- Artwork 36: Side Project -->
+   <article class="card" data-category="illustration motion" data-color="nature">
+    <img alt="Artwork 36" class="thumb" onclick="openPDFModal('slides/2girls.pdf')" src="images/ftbudakanimation.png"/>
+    <p class="cap">
+     Side Project
+    </p>
+   </article>
+   <!-- Artwork 37: Ibis Paintx Practice -->
+   <article class="card" data-category="illustration" data-color="neutral">
+    <img alt="Artwork 37" class="thumb" onclick="openPDFModal('slides/ibis.pdf')" src="images/ibis.png"/>
+    <p class="cap">
+     Ibis Paintx Practice
+    </p>
+   </article>
+   <!-- Artwork 38: Photography hantu -->
+   <article class="card" data-category="photo photoshop lightroom" data-color="neutral">
+    <img alt="Artwork 38" class="thumb" onclick="openPDFModal('slides/2girls.pdf')" src="images/hantu.png"/>
+    <p class="cap">
+     Photography hantu
+    </p>
+   </article>
+   <!-- Artwork 39: Website Redesign -->
+   <article class="card" data-category="uiux" data-color="cool">
+    <img alt="Artwork 39" class="thumb" onclick="openPDFModal('slides/2girls.pdf')" src="images/redesign.png"/>
+    <p class="cap">
+     Website Redesign
+    </p>
+   </article>
+   <!-- Artwork 40: Puzzle Game -->
+   <article class="card" data-category="game" data-color="pastel">
+    <img alt="Artwork =40" class="thumb" onclick="openPDFModal('slides/2girls.pdf')" src="images/gameicecream.png"/>
+    <p class="cap">
+     Puzzle Game
+    </p>
+   </article>
+   <!-- =========================
+       ROW 9
+  ========================== -->
+   <!-- Artwork 41: Orang Asli's Crown -->
+   <article class="card" data-category="graphic illustration" data-color="nature">
+    <img alt="Artwork 41" class="thumb" onclick="openPDFModal('slides/2girls.pdf')" src="images/crown.png"/>
+    <p class="cap">
+     Orang Asli's Crown
+    </p>
+   </article>
+   <!-- Artwork 42: 2D Animation 2 -->
+   <article class="card" data-category="motion aftereffects" data-color="cool">
+    <img alt="Artwork 42" class="thumb" onclick="openPDFModal('slides/2girls.pdf')" src="images/pplari.png"/>
+    <p class="cap">
+     2D Animation 2
+    </p>
+   </article>
+   <!-- Artwork 43: Bully Quiz Game -->
+   <article class="card" data-category="game" data-color="pop">
+    <img alt="Artwork 43" class="thumb" onclick="openPDFModal('slides/bq.pdf')" src="images/wwudo.png"/>
+    <p class="cap">
+     Bully Quiz Game
+    </p>
+   </article>
+   <!-- Artwork 44: Meerawr Fonts -->
+   <article class="card" data-category="best graphic photoshop illustrator" data-color="neutral">
+    <img alt="Artwork 44" class="thumb" onclick="openPDFModal('slides/meera fonts.pdf')" src="images/meerafont.png"/>
+    <p class="cap">
+     Meerawr Fonts
+    </p>
+   </article>
+   <!-- Artwork 45: Early Designs -->
+   <article class="card" data-category="graphic fineart photoshop" data-color="neutral">
+    <img alt="Artwork 45" class="thumb" onclick="openPDFModal('slides/Design lama.pdf')" src="images/earlydesign.png"/>
+    <p class="cap">
+     Early Designs
+    </p>
+   </article>
+   <!-- =========================
+       ROW 10
+  ========================== -->
+   <!-- Artwork 46: Add a subheading -->
+   <article class="card" data-category="graphic fineart" data-color="warm">
+    <img alt="Artwork 46" class="thumb" onclick="openPDFModal('slides/2girls.pdf')" src="images/batikrama.png"/>
+    <p class="cap">
+     Add a subheading
+    </p>
+   </article>
+   <!-- Artwork 47: Traditional Food Booklet -->
+   <article class="card" data-category="best graphic advertising indesign" data-color="warm">
+    <img alt="Artwork 47" class="thumb" onclick="openPDFModal('slides/bookletmerah.pdf')" src="images/majalahmerah.png"/>
+    <p class="cap">
+     Traditional Food Booklet
+    </p>
+   </article>
+   <!-- Artwork 48: Jalan-Jalan Magazine -->
+   <article class="card" data-category="photo lightroom indesign" data-color="warm">
+    <img alt="Artwork 48" class="thumb" onclick="openPDFModal('slides/jalanjalan.pdf')" src="images/majalahsunset.png"/>
+    <p class="cap">
+     Jalan-Jalan Magazine
+    </p>
+   </article>
+   <!-- Artwork 49: Motion Graphic 2 -->
+   <article class="card" data-category="best motion aftereffects" data-color="neutral">
+    <img alt="Artwork 49" class="thumb" onclick="openPDFModal('slides/2girls.pdf')" src="images/mg2.png"/>
+    <p class="cap">
+     Motion Graphic 2
+    </p>
+   </article>
+   <!-- Artwork 50: Innovation Group Project -->
+   <article class="card" data-category="uiux product" data-color="cool">
+    <img alt="Artwork 50" class="thumb" onclick="openPDFModal('slides/2girls.pdf')" src="images/vle.png"/>
+    <p class="cap">
+     Innovation Group Project
+    </p>
+   </article>
+   <!-- =========================
+       ROW 11
+  ========================== -->
+   <!-- Artwork 51: Videos -->
+   <article class="card" data-category="motion premiere" data-color="neutral">
+    <img alt="Artwork 51" class="thumb" src="images/.png"/>
+    <p class="cap">
+     Videos
+    </p>
+   </article>
+   <!-- Artwork 52: Motion Graphic 3 -->
+   <article class="card" data-category="best graphic motion aftereffects" data-color="pop">
+    <img alt="Artwork 52" class="thumb" src="images/.png"/>
+    <p class="cap">
+     Motion Graphic 3
+    </p>
+   </article>
+   <!-- Artwork 53: fyp poster -->
+   <article class="card" data-category="graphic photoshop" data-color="cool">
+    <img alt="Artwork 53" class="thumb" src="images/.png"/>
+    <p class="cap">
+     fyp poster
+    </p>
+   </article>
+   <!-- Artwork 54: other excercise -->
+   <article class="card" data-category="graphic" data-color="neutral">
+    <img alt="Artwork 54 (in progress)" class="thumb" src="images/.png"/>
+    <p class="cap">
+     other excercise
+    </p>
+   </article>
+   <!-- Artwork 55: Adobe premier pro Excercise -->
+   <article class="card" data-category="motion premiere" data-color="neutral">
+    <img alt="Artwork 55 (in progress)" class="thumb" src="images/.png"/>
+    <p class="cap">
+     Adobe premier pro Excercise
+    </p>
+   </article>
+   <!-- =========================
+       ROW 12
+  ========================== -->
+   <!-- Artwork 56: Children book cover -->
+   <article class="card" data-category="graphic illustration" data-color="pastel">
+    <img alt="Artwork 56 (in progress)" class="thumb" src="images/.png"/>
+    <p class="cap">
+     Children book cover
+    </p>
+   </article>
+   <!-- Artwork 57: sampul raya -->
+   <article class="card" data-category="graphic advertising" data-color="warm">
+    <img alt="Artwork 57 (in progress)" class="thumb" src="images/.png"/>
+    <p class="cap">
+     sampul raya
+    </p>
+   </article>
+   <!-- Artwork 58: novel cover -->
+   <article class="card" data-category="graphic photoshop" data-color="neutral">
+    <img alt="Artwork 58 (in progress)" class="thumb" src="images/.png"/>
+    <p class="cap">
+     novel cover
+    </p>
+   </article>
+   <!-- Artwork 59: photoshop excercises -->
+   <article class="card" data-category="photoshop" data-color="neutral">
+    <img alt="Artwork 59 (in progress)" class="thumb" src="images/.png"/>
+    <p class="cap">
+     photoshop excercises
+    </p>
+   </article>
+   <!-- Artwork 60: card jemputan kahwin -->
+   <article class="card" data-category="graphic advertising indesign" data-color="warm">
+    <img alt="Artwork 60 (in progress)" class="thumb" src="images/.png"/>
+    <p class="cap">
+     card jemputan kahwin
+    </p>
+   </article>
+  </main>
+  <!-- =========================
+       MODALS
+  ========================== -->
+  <div class="modal" id="imageModal">
+   <span class="close" onclick="closeModal()">
+    &times;
+   </span>
+   <img alt="Preview image" class="modal-img" id="modalImage"/>
+  </div>
+  <div class="modal" id="pdfModal">
+   <div class="modal-box">
+    <span class="close" onclick="closePDFModal()">
+     &times;
+    </span>
+    <iframe class="pdf-frame" id="pdfFrame" src="">
+    </iframe>
+   </div>
+  </div>
+  <script src="script.js">
+  </script>
+ </body>
+</html>
